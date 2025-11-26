@@ -1,24 +1,35 @@
-# Makefile v1 — простая сборка без подкаталогов
+# Makefile — сборка проекта "Комплексное число" под Windows (mingw32-make)
 
 CXX      = g++
 CXXFLAGS = -Wall -std=c++11
 LDFLAGS  =
 
-PROG = complex.exe
-OBJS = mycomplex.o testcmp.o
+# Исполняемый файл и объектные файлы в подкаталогах
+PROG = bin\complex.exe
+OBJS = bin\obj\mycomplex.o bin\obj\testcmp.o
 
-.PHONY: all clean
+.PHONY: all clean dirs
 
-all: $(PROG)
+# Основная цель — сборка проекта
+all: dirs $(PROG)
 
+# Создание необходимых каталогов (Windows cmd)
+dirs:
+	if not exist bin mkdir bin
+	if not exist bin\obj mkdir bin\obj
+
+# Линковка исполняемого файла
 $(PROG): $(OBJS)
 	$(CXX) $(LDFLAGS) -o $(PROG) $(OBJS)
 
-mycomplex.o: mycomplex.cpp mycomplex.h
-	$(CXX) $(CXXFLAGS) -c mycomplex.cpp
+# Объектные файлы и их зависимости
+bin\obj\mycomplex.o: mycomplex.cpp mycomplex.h
+	$(CXX) $(CXXFLAGS) -c mycomplex.cpp -o bin\obj\mycomplex.o
 
-testcmp.o: testcmp.cpp mycomplex.h
-	$(CXX) $(CXXFLAGS) -c testcmp.cpp
+bin\obj\testcmp.o: testcmp.cpp mycomplex.h
+	$(CXX) $(CXXFLAGS) -c testcmp.cpp -o bin\obj\testcmp.o
 
+# Очистка: удаляем объектники и exe
 clean:
-	rm -f *.o $(PROG)
+	if exist bin\obj\*.o del /q bin\obj\*.o
+	if exist $(PROG) del /q $(PROG)
