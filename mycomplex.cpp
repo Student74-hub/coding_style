@@ -1,3 +1,8 @@
+/**
+ * @file mycomplex.cpp
+ * @brief Реализация методов класса Complex для работы с комплексными числами.
+ */
+
 #include <iostream>
 #include <cmath>
 #include "mycomplex.h"

@@ -1,0 +1,38 @@
+\doxysection{C\+:/\+Users/pshch/\+Downloads/git/coding\+\_\+style/testcmp.cpp}
+\hypertarget{testcmp_8cpp_source}{}\label{testcmp_8cpp_source}\mbox{\hyperlink{testcmp_8cpp}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{mycomplex_8h}{mycomplex.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00010}00010\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00016}\mbox{\hyperlink{testcmp_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00016}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{testcmp_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{comment}{//\ Создание\ комплексных\ чисел}}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{class_complex}{Complex}}\ A,\ B(\ -\/4\ ),\ C(\ 23.0,\ 45.9\ );}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00020}00020\ \ \ \ \ cout\ <<\ A\ <<\ \textcolor{stringliteral}{"{},"{}}\ <<\ B\ <<\ \textcolor{stringliteral}{"{},"{}}\ <<\ C\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//\ Сложение\ комплексных\ чисел}}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00023}00023\ \ \ \ \ A\ =\ B\ +\ C;}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00024}00024\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}A=B+C,A="{}}\ <<\ A\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{comment}{//\ Арифметические\ операции}}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{class_complex}{Complex}}\ M\ =\ B\ -\/\ C;}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00028}00028\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}M\ =\ B\ -\/\ C,\ M\ =\ "{}}\ <<\ M\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00029}00029\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}M*A="{}}\ <<\ M\ *\ A\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00030}00030\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}M/4.45="{}}\ <<\ M\ /\ 4.45\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{comment}{//\ Ввод\ комплексного\ числа\ с\ клавиатуры}}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{class_complex}{Complex}}\ D;}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00034}00034\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ complex\ number\ D\ =\ "{}};}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00035}00035\ \ \ \ \ cin\ >>\ D;}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{comment}{//\ Операция\ присваивания\ с\ добавлением}}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00038}00038\ \ \ \ \ A\ +=\ C\ +\ D;}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00039}00039\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}D\ =\ "{}}\ <<\ D\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nA\ =\ "{}}\ <<\ A\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{testcmp_8cpp_source_l00042}00042\ \}}
+
+\end{DoxyCode}
