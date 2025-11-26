@@ -3,39 +3,47 @@
 #include "mycomplex.h"
 using namespace std;
 
+// Конструктор комплексного числа с заданными действительной и мнимой частями
 Complex::Complex( double aRe, double aIm )
 {
     Re = aRe;
     Im = aIm;
 }
 
+// Конструктор копирования
 Complex::Complex( const Complex& aRval )
 {
     Re = aRval.Re;
     Im = aRval.Im;
 }
 
+// Деструктор
 Complex::~Complex()
 {
     Re = 0.0;
     Im = 0.0;
 }
 
+// Установка значений действительной и мнимой частей
 void Complex::Set( double aRe, double aIm )
 {
     Re = aRe;
     Im = aIm;
 }
 
+// Оператор преобразования к типу double (возвращает модуль)
 Complex::operator double()
 {
     return abs();
 }
 
+// Вычисление модуля комплексного числа
 double Complex::abs()
 {
     return sqrt( Re * Re + Im * Im );
 }
+
+// Арифметические операторы с комплексными числами
 
 Complex Complex::operator+( const Complex& aRval )
 {
@@ -52,6 +60,8 @@ Complex Complex::operator-( const Complex& aRval )
     Result.Im = Im - aRval.Im;
     return Result;
 }
+
+// Арифметические операторы с вещественными числами
 
 Complex Complex::operator+( const double& aval )
 {
@@ -92,6 +102,8 @@ Complex Complex::operator/( const double& aRval )
     return Result;
 }
 
+// Операторы присваивания с комплексными числами
+
 Complex& Complex::operator+=( const Complex& arval )
 {
     Re += arval.Re;
@@ -113,6 +125,8 @@ Complex& Complex::operator*=( const Complex& aRval )
     Im = Im * aRval.Re + tmpRe * aRval.Im;
     return *this;
 }
+
+// Операторы присваивания с вещественными числами
 
 Complex& Complex::operator+=( const double& aRval )
 {
@@ -140,6 +154,8 @@ Complex& Complex::operator/=( const double& aRval )
     return *this;
 }
 
+// Операторы присваивания
+
 Complex& Complex::operator=( const Complex& aRval )
 {
     Re = aRval.Re;
@@ -153,6 +169,8 @@ Complex& Complex::operator=( const double& aRval )
     Im = 0.0;
     return *this;
 }
+
+// Операторы ввода-вывода
 
 istream& operator>>( istream& stream, Complex& a )
 {
@@ -169,6 +187,8 @@ ostream& operator<<( ostream& stream, Complex& a )
     stream << a.Im << 'i';
     return stream;
 }
+
+// Дружественные арифметические операторы (вещественное число слева)
 
 Complex operator+( const double& aLval, const Complex& aRval )
 {
